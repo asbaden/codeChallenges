@@ -1,2 +1,3 @@
 # codeChallenges
-JS and Python Challenges from LeetCode 
+Python Challenges from LeetCode 
+
