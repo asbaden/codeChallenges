@@ -32,3 +32,18 @@ class Solution:
         print("This is reversed words", reversedWords)
         return " ".join(reversedWords)
 
+# Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+# Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        single_number = []
+        for num in nums:
+            if num not in single_number:
+                single_number.append(num)
+            else:
+                single_number.remove(num)
+        return single_number[0]
+
+
