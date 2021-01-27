@@ -46,4 +46,14 @@ class Solution:
                 single_number.remove(num)
         return single_number[0]
 
+# Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of (nums[i]-1)*(nums[j]-1).
+
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        #sort the array so we know where the biggest numbers are 
+        nums.sort()
+        print("THIS IS NUMS", nums)
+        #return the output of multiplying the two biggest numbers where both are subtracted by 1
+        return (nums[-1]-1) * (nums[-2]-1)
+
 
