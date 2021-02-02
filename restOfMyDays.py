@@ -104,3 +104,26 @@ class Solution:
             if character not in first_string:
                 return character
 
+Given alphanumeric string s. (Alphanumeric string is a string consisting of lowercase English letters and digits).
+
+You have to find a permutation of the string where no letter is followed by another letter and no digit is followed by another digit. That is, no two adjacent characters have the same type.
+
+Return the reformatted string or return an empty string if it is impossible to reformat the string.
+
+class Solution:
+    def reformat(self, s: str) -> str:
+        nums=[]
+        letters=[]
+        emptyString=""
+        for ele in s:
+            if ele.isdigit():
+                nums.append(ele)
+            else:
+                letters.append(ele)
+        print("THIS IS NUMS", nums)
+        print("THIS IS LETTERS", letters)
+        if len(nums)-len(letters) > 1:
+            return emptyString
+        result = ''.join(a + c for a, c in zip(nums, letters))
+        return result
+
