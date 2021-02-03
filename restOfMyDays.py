@@ -127,3 +127,15 @@ class Solution:
         result = ''.join(a + c for a, c in zip(nums, letters))
         return result
 
+# Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
+
+
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        for i in range(len(s)):
+            character = s[i]
+            print("THIS IS CHARACTER", character)
+            if s.count(character)==1:
+                return i
+
+        return -1
