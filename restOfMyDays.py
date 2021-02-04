@@ -14,7 +14,6 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        #use reverse method to reverse the list
         s.reverse()
 
 # Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
