@@ -161,3 +161,18 @@ class Solution:
         elif l2:
             tail.next = l2
         return dummy.next
+
+# Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search target in nums. If target exists, then return its index, otherwise return -1.
+
+while left_index <= right_index:
+            middle_index = (left_index + right_index) // 2 
+            print("THIS IS MIDDLE", middle_index)
+            if target < nums[middle_index]:
+                right_index = middle_index - 1 
+                print("THIS IS RIGHT_INDEX", right_index)
+            elif target > nums[middle_index]:
+                left_index = middle_index + 1
+            else:
+                return middle_index
+                
+        return -1
