@@ -55,7 +55,6 @@ class Solution:
 
 class Solution:
     def sortArrayByParity(self, A: List[int]) -> List[int]:
-        #create two empty arrays 
         even=[]
         odd=[]
         for num in A:
@@ -130,7 +129,6 @@ class Solution:
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        #create a dummy node for output
         dummy = ListNode()
         tail = dummy 
         while l1 and l2:
