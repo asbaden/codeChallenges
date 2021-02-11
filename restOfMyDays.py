@@ -22,13 +22,10 @@ class Solution:
     def reverseWords(self, s: str) -> str:
         reversedWords=[]
         listOfWords= s.split()
-        print(listOfWords)
         for word in listOfWords:
-            print("This is word", word)
             reversedWords.append(word[::-1])
         
         
-        print("This is reversed words", reversedWords)
         return " ".join(reversedWords)
 
 # Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
@@ -49,10 +46,7 @@ class Solution:
 
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        #sort the array so we know where the biggest numbers are 
         nums.sort()
-        print("THIS IS NUMS", nums)
-        #return the output of multiplying the two biggest numbers where both are subtracted by 1
         return (nums[-1]-1) * (nums[-2]-1)
 
 # Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
@@ -61,10 +55,8 @@ class Solution:
 
 class Solution:
     def sortArrayByParity(self, A: List[int]) -> List[int]:
-        #create two empty arrays 
         even=[]
         odd=[]
-        #iterate through the list of numbers checking if even or odd, appending to appropriate list
         for num in A:
             if (num%2)==0:
                 even.append(num)
@@ -93,12 +85,9 @@ class Solution:
 
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
-        #use a list comprehension to place the characters of each          string into a list 
         first_string = [char for char in s]
         second_string= [char for char in t]
-        print("THIS IS FIRST STRING", first_string)
-        print("THIS IS SECOND STRING", second_string)
-        #use a for loop to run through the second string checking          if the character is present, if not return it 
+  
         for character in second_string:
             if character not in first_string:
                 return character
@@ -119,8 +108,6 @@ class Solution:
                 nums.append(ele)
             else:
                 letters.append(ele)
-        print("THIS IS NUMS", nums)
-        print("THIS IS LETTERS", letters)
         if len(nums)-len(letters) > 1:
             return emptyString
         result = ''.join(a + c for a, c in zip(nums, letters))
@@ -133,7 +120,6 @@ class Solution:
     def firstUniqChar(self, s: str) -> int:
         for i in range(len(s)):
             character = s[i]
-            print("THIS IS CHARACTER", character)
             if s.count(character)==1:
                 return i
 
@@ -143,7 +129,6 @@ class Solution:
 
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        #create a dummy node for output
         dummy = ListNode()
         tail = dummy 
         while l1 and l2:
@@ -153,9 +138,9 @@ class Solution:
             else: 
                 tail.next = l2
                 l2 = l2.next
-            # tail is updated regardless
+            
             tail = tail.next 
-        #case for empty list
+        
         if l1:
             tail.next = l1
         elif l2:
@@ -166,10 +151,9 @@ class Solution:
 
 while left_index <= right_index:
             middle_index = (left_index + right_index) // 2 
-            print("THIS IS MIDDLE", middle_index)
             if target < nums[middle_index]:
                 right_index = middle_index - 1 
-                print("THIS IS RIGHT_INDEX", right_index)
+                
             elif target > nums[middle_index]:
                 left_index = middle_index + 1
             else:
