@@ -159,3 +159,19 @@ while left_index <= right_index:
                 return middle_index
                 
         return -1
+
+# Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+
+# Find all the elements that appear twice in this array.
+
+class Solution:
+    def findDuplicates(self, nums: List[int]) -> List[int]:
+        duplicates = []
+        for i in nums:
+            i = abs(i)
+            print(i)
+            if nums[i-1] < 0:
+                duplicates.append(i)
+            else:
+                nums[i-1] = -nums[i-1]
+        return duplicates
