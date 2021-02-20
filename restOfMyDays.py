@@ -175,3 +175,19 @@ class Solution:
             else:
                 nums[i-1] = -nums[i-1]
         return duplicates
+
+# A binary tree is univalued if every node in the tree has the same value.
+
+# Return true if and only if the given tree is univalued.
+
+class Solution:
+    def isUnivalTree(self, root: TreeNode) -> bool:
+        vals = []
+        def dfs(node):
+            if node:
+                vals.append(node.val)
+                dfs(node.left)
+                dfs(node.right)
+
+        dfs(root)
+        return len(set(vals)) == 1
