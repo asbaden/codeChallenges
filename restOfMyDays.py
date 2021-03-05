@@ -191,3 +191,14 @@ class Solution:
 
         dfs(root)
         return len(set(vals)) == 1
+
+# Given the string, check if it is a palindrome.
+
+def checkPalindrome(inputString):
+    #assign the reverse of the input string to a variable and check if it matches the input     string
+    #if so return true
+    if inputString[::-1] == inputString:
+        return True
+    else:
+        return False
+
