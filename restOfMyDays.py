@@ -202,3 +202,18 @@ def checkPalindrome(inputString):
     else:
         return False
 
+# Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+
+def adjacentElementsProduct(inputArray):
+    #create a array to store the products of adjacent elemtents 
+    #multiply the adjacent elements and store in that list 
+    #return the largest element from that array 
+    products = []
+    for idx, ele in enumerate(inputArray):
+        if idx == 0:
+            products.append(inputArray[idx+1]*inputArray[idx])
+        elif idx == len(inputArray)-1:
+            products.append(inputArray[idx-1]*inputArray[idx])
+        else:
+            products.append(inputArray[idx-1]*inputArray[idx]) and products.append(inputArray[idx+1]*inputArray[idx])
+    return max(products)
