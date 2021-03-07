@@ -210,10 +210,13 @@ def adjacentElementsProduct(inputArray):
     #return the largest element from that array 
     products = []
     for idx, ele in enumerate(inputArray):
+        #check index, if zero multiply the number of that index by the the number in the following index and append to array
         if idx == 0:
             products.append(inputArray[idx+1]*inputArray[idx])
+        #check if its the last index, if so multiply the number in that index by the number in the previous index and append to array 
         elif idx == len(inputArray)-1:
             products.append(inputArray[idx-1]*inputArray[idx])
         else:
+            #multiply the index by the numbers in adjacent indexes and append to array
             products.append(inputArray[idx-1]*inputArray[idx]) and products.append(inputArray[idx+1]*inputArray[idx])
     return max(products)
