@@ -217,6 +217,12 @@ def adjacentElementsProduct(inputArray):
         elif idx == len(inputArray)-1:
             products.append(inputArray[idx-1]*inputArray[idx])
         else:
-            #multiply the index by the numbers in adjacent indexes and append to array
+            #multiply the index by the numbers i adjacent indexes and append to array
             products.append(inputArray[idx-1]*inputArray[idx]) and products.append(inputArray[idx+1]*inputArray[idx])
     return max(products)
+
+# Below we will define an n-interesting polygon. Your task is to find the area of a polygon for a given n.
+def shapeArea(n):
+    #if n is 1 return 1 
+    #else if n > 1 return (n*2)*(n-1)+1 
+    return (n*2)*(n-1)+1
